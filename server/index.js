@@ -17,6 +17,11 @@ app.use(cors());
 app.use(express.json({ limit: '30mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+// Root route to avoid 404 at /
+app.get('/', (req, res) => {
+  res.send('Welcome to Party Interaction API');
+});
+
 // Routes
 app.use('/api/partyInteraction', partyInteractionRoutes);
 
