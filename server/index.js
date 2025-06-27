@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // MongoDB connection
-const MONGO_URI = 'mongodb+srv://workcampuse:Tharu123@cluster0.apnvyva.mongodb.net/customer-service?retryWrites=true&w=majority&appName=Cluster0';
+const MONGO_URI = process.env.MONGO_URI;
 
 // Middleware
 app.use(cors());
